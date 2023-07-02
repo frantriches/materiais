@@ -2,16 +2,73 @@
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath}
+\usepackage{amsmath,amsthm}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[shortlabels]{enumitem}
 \usepackage{multicol}
 \usepackage{float} 
-%\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{gensymb} % \degree
+
+\definecolor{rosa}{HTML}{edaae5} %para fórmulas
+\definecolor{azul}{HTML}{aae5ed} %para definições
+\definecolor{amarelo}{HTML}{e5edaa} %para observações importantes
+\definecolor{cinza}{HTML}{c6c9c5} %para linhas das tabelas
+\definecolor{verde}{HTML}{c4edaa}
+
+\usepackage{graphicx}
 %\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\graphicspath{./Capitulos/Figuras/}
+
+\theoremstyle{definition}
+\newtheorem{exem}{Exemplo}
+\newcommand{\exemautorefname}{Exemplo}
+\newtheorem{obs}{Observação}
+\newcommand{\obsautorefname}{Observação}
+
+\theoremstyle{plain}
+\newtheorem{defi}{Definição}[section]
+
+\newcommand{\fim}{\hfill {$\Box$}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\iu}{{i\mkern1mu}} %unidade imaginária
+\newcommand{\sen}{\operatorname{sen}}
+\newcommand{\cotan}{\operatorname{cot}}
+\newcommand{\cosec}{\operatorname{csc}}
+\newcommand{\arcsen}{\operatorname{arcsen}}
+\newcommand*\abs[1]{\left|#1\right|}
+
+
+
+\newcommand{\azul}{\ensuremath{\blacksquare}}
+\newcommand{\destaque}[1]{\colorbox{rosa}{$\displaystyle #1$}}
+
 \author{Francieli Triches}
 \title{Materiais}
+
 \begin{document}
-\include{QC_Logica}
+\include{./Capitulos/AnaliseCombinatoria}
+\include{./Capitulos/QC_AnaliseCombinatoria}
+\include{./Capitulos/QC_Matrizes}
+\include{./Capitulos/QC_SistemasDeMedida}
+\include{./Capitulos/Estatistica}
+\include{./Capitulos/NumerosComplexos}
+\include{./Capitulos/QC_Estatistica}
+\include{./Capitulos/QC_NumerosComplexos}
+\include{./Capitulos/SistemasDeMedida}
+\include{./Capitulos/Logica}
+\include{./Capitulos/PAePG}
+\include{./Capitulos/QC_Logica}
+\include{./Capitulos/QC_PAePG}
+\include{./Capitulos/Trigonometria}
 \end{document}
